@@ -5,6 +5,9 @@ authors = ["Enzo Lombardi <enzinol@gmail.com>"]
 edition = "2024"
 description = "Common tree-sitter grammars for tokensave (17 languages)"
 license = "MIT"
+repository = "https://github.com/aovestdipaperino/tree-sitter"
+
+[workspace]
 
 [dependencies]
 tokensave-lite-treesitters = { path = "../tokensave-lite-treesitters" }
