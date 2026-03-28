@@ -5,20 +5,21 @@ authors = ["Enzo Lombardi <enzinol@gmail.com>"]
 edition = "2024"
 description = "Common tree-sitter grammars for tokensave (17 languages)"
 license = "MIT"
-repository = "https://github.com/aovestdipaperino/tree-sitter"
+repository = "https://github.com/aovestdipaperino/tokensave-medium-treesitters"
+readme = "README.md"
 
 [workspace]
 
 [dependencies]
-tokensave-lite-treesitters = { path = "../tokensave-lite-treesitters" }
+tokensave-lite-treesitters = { version = "0.1.0", path = "../tokensave-lite-treesitters" }
 tree-sitter = "0.26"
+tree-sitter-language = "0.1"
 tree-sitter-cpp = "0.23"
 tree-sitter-c-sharp = "0.23"
 tree-sitter-ruby = "0.23"
-tree-sitter-kotlin = "0.1"
-tree-sitter-swift = "0.6"
-tree-sitter-scala = "0.23"
-tree-sitter-php = "0.23"
-tree-sitter-bash = "0.23"
-tree-sitter-lua = "0.2"
+tree-sitter-swift = "0.7"
+tree-sitter-scala = "0.25"
+tree-sitter-php = "0.24"
+tree-sitter-bash = "0.25"
+tree-sitter-lua = "0.5"
 tree-sitter-dart = "0.1"

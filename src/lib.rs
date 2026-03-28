@@ -13,7 +13,6 @@ pub mod languages {
     pub use tree_sitter_cpp;
     pub use tree_sitter_c_sharp;
     pub use tree_sitter_dart;
-    pub use tree_sitter_kotlin;
     pub use tree_sitter_lua;
     pub use tree_sitter_php;
     pub use tree_sitter_ruby;
@@ -22,20 +21,19 @@ pub mod languages {
 }
 
 /// Returns (name, language_fn) pairs for all medium-tier languages.
-pub fn all_languages() -> Vec<(&'static str, tree_sitter::Language)> {
+pub fn all_languages() -> Vec<(&'static str, tree_sitter_language::LanguageFn)> {
     let mut langs = tokensave_lite_treesitters::all_languages();
     langs.extend([
-        ("cpp", tree_sitter_cpp::LANGUAGE.into()),
-        ("c_sharp", tree_sitter_c_sharp::LANGUAGE.into()),
-        ("ruby", tree_sitter_ruby::LANGUAGE.into()),
-        ("kotlin", tree_sitter_kotlin::LANGUAGE.into()),
-        ("swift", tree_sitter_swift::LANGUAGE_SWIFT.into()),
-        ("scala", tree_sitter_scala::LANGUAGE.into()),
-        ("php", tree_sitter_php::LANGUAGE_PHP.into()),
-        ("tsx", tree_sitter_typescript::LANGUAGE_TSX.into()),
-        ("bash", tree_sitter_bash::LANGUAGE.into()),
-        ("lua", tree_sitter_lua::LANGUAGE.into()),
-        ("dart", tree_sitter_dart::LANGUAGE.into()),
+        ("cpp", tree_sitter_cpp::LANGUAGE),
+        ("c_sharp", tree_sitter_c_sharp::LANGUAGE),
+        ("ruby", tree_sitter_ruby::LANGUAGE),
+        ("swift", tree_sitter_swift::LANGUAGE),
+        ("scala", tree_sitter_scala::LANGUAGE),
+        ("php", tree_sitter_php::LANGUAGE_PHP),
+        ("tsx", tokensave_lite_treesitters::languages::tree_sitter_typescript::LANGUAGE_TSX),
+        ("bash", tree_sitter_bash::LANGUAGE),
+        ("lua", tree_sitter_lua::LANGUAGE),
+        ("dart", tree_sitter_dart::LANGUAGE),
     ]);
     langs
 }
