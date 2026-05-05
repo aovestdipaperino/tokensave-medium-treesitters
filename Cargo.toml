@@ -1,9 +1,9 @@
 [package]
 name = "tokensave-medium-treesitters"
-version = "0.1.0"
+version = "0.2.0"
 authors = ["Enzo Lombardi <enzinol@gmail.com>"]
 edition = "2024"
-description = "Common tree-sitter grammars for tokensave (17 languages)"
+description = "Common tree-sitter grammars for tokensave (18 languages)"
 license = "MIT"
 repository = "https://github.com/aovestdipaperino/tokensave-medium-treesitters"
 readme = "README.md"
@@ -11,7 +11,7 @@ readme = "README.md"
 [workspace]
 
 [dependencies]
-tokensave-lite-treesitters = { version = "0.1.0", path = "../tokensave-lite-treesitters" }
+tokensave-lite-treesitters = "0.2.0"
 tree-sitter = "0.26"
 tree-sitter-language = "0.1"
 tree-sitter-cpp = "0.23"
@@ -22,4 +22,5 @@ tree-sitter-scala = "0.25"
 tree-sitter-php = "0.24"
 tree-sitter-bash = "0.25"
 tree-sitter-lua = "0.5"
-tree-sitter-dart = "0.1"
+tree-sitter-dart-orchard = "0.3"
+tree-sitter-kotlin-sg = "0.4"

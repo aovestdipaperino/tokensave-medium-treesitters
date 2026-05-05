@@ -12,7 +12,8 @@ pub mod languages {
     pub use tree_sitter_bash;
     pub use tree_sitter_cpp;
     pub use tree_sitter_c_sharp;
-    pub use tree_sitter_dart;
+    pub use tree_sitter_dart_orchard;
+    pub use tree_sitter_kotlin_sg;
     pub use tree_sitter_lua;
     pub use tree_sitter_php;
     pub use tree_sitter_ruby;
@@ -33,7 +34,8 @@ pub fn all_languages() -> Vec<(&'static str, tree_sitter_language::LanguageFn)> 
         ("tsx", tokensave_lite_treesitters::languages::tree_sitter_typescript::LANGUAGE_TSX),
         ("bash", tree_sitter_bash::LANGUAGE),
         ("lua", tree_sitter_lua::LANGUAGE),
-        ("dart", tree_sitter_dart::LANGUAGE),
+        ("dart", tree_sitter_dart_orchard::LANGUAGE),
+        ("kotlin", tree_sitter_kotlin_sg::LANGUAGE),
     ]);
     langs
 }
